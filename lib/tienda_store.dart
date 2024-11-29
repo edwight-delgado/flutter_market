@@ -35,7 +35,7 @@ class _TiendaStoreHomeState extends State<TiendaStoreHome> {
 
   _getTopForBlackPanel(TiendaState state, Size size) {
     if (state == TiendaState.normal) {
-      return size.height - cardBarHeight - (kToolbarHeight * .95) - 35;
+      return size.height - cardBarHeight - (kToolbarHeight * .95) - 45;
     } else if (state == TiendaState.cart) {
       return cardBarHeight / 2;
     }
@@ -62,7 +62,8 @@ class _TiendaStoreHomeState extends State<TiendaStoreHome> {
             builder: (context, _) {
               return Scaffold(
                 appBar: AppBar(
-                  title: const Text('AppBar with hamburger button'),
+                  backgroundColor: yellowColor,
+                  title: const Text('market dabajuro'),
                   leading: Builder(
                     builder: (context) {
                       return IconButton(
@@ -73,12 +74,6 @@ class _TiendaStoreHomeState extends State<TiendaStoreHome> {
                       );
                     },
                   ),
-                  bottom: PreferredSize(
-                      child: Container(
-                        color: Colors.white,
-                        child: TextFormField(),
-                      ),
-                      preferredSize: Size.fromHeight(kToolbarHeight)),
                 ),
                 drawer: Drawer(
                   child: ListView(
